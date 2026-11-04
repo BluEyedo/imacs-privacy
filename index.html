@@ -19,10 +19,23 @@
   table { width: 100%; border-collapse: collapse; font-size: .95rem; }
   th, td { text-align: left; vertical-align: top; padding: 8px 10px 8px 0; border-bottom: 1px solid var(--line); }
   a { color: var(--accent); }
+  [hidden] { display: none !important; }
+  .language-switcher { display: flex; justify-content: flex-end; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .language-switcher button { min-height: 44px; padding: 8px 18px; border: 1px solid var(--accent); border-radius: 999px; background: transparent; color: var(--accent); font: inherit; cursor: pointer; }
+  .language-switcher button[aria-pressed="true"] { background: var(--accent); color: var(--bg); font-weight: 600; }
+  .language-switcher button:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; }
+  th, td, a { overflow-wrap: anywhere; }
+  article[lang="th"] { line-height: 1.85; }
+  @media (max-width: 480px) { main { padding: 24px 16px 48px; } h1 { font-size: 1.6rem; } }
 </style>
 </head>
 <body>
 <main>
+<div class="language-switcher" role="group" aria-label="Policy language / ภาษาของนโยบาย" hidden>
+  <button type="button" lang="en" data-language="en" aria-controls="policy-en" aria-pressed="true">English</button>
+  <button type="button" lang="th" data-language="th" aria-controls="policy-th" aria-pressed="false">ภาษาไทย</button>
+</div>
+<article id="policy-en" lang="en">
 <h1>IMACS App Privacy Policy</h1>
 <p class="updated">Last updated: 1 November 2026</p>
 
@@ -96,6 +109,112 @@
 Email: <a href="mailto:i_corp1432@hotmail.com">i_corp1432@hotmail.com</a><br>
 Phone: 074360199 (Monday to Friday, 08:30 to 16:30, except public holidays)<br>
 Website: <a href="https://imacscenter.org">imacscenter.org</a></p>
+</article>
+<article id="policy-th" lang="th">
+<h1>นโยบายความเป็นส่วนตัวของแอป IMACS</h1>
+<p class="updated">ปรับปรุงล่าสุด: 1 พฤศจิกายน 2569</p>
+
+<p>นโยบายนี้อธิบายวิธีที่บริษัท อิสลามิค ซิสเต็มส์คอร์ปอเรชั่น จำกัด (Islamic System Corporation Co., Ltd.) ผู้ดำเนินโครงการ Islamic Management Center System (iMaCS) (เรียกว่า “เรา”) จัดการข้อมูลส่วนบุคคลเมื่อคุณใช้แอป IMACS โดยเราเป็นผู้ควบคุมข้อมูลส่วนบุคคลตามพระราชบัญญัติคุ้มครองข้อมูลส่วนบุคคล พ.ศ. 2562 (PDPA)</p>
+
+<h2>1. ข้อมูลที่เราเก็บรวบรวม</h2>
+<table>
+  <tr><th>ข้อมูล</th><th>วัตถุประสงค์ในการใช้</th></tr>
+  <tr><td><strong>ข้อมูลบัญชี:</strong> คำนำหน้าชื่อ ชื่อและนามสกุล อีเมล หมายเลขโทรศัพท์ วันเกิด หมายเลขบัตรประชาชนไทยหรือหนังสือเดินทาง และรหัสผ่านในรูปแบบค่าแฮช</td><td>เพื่อสร้างและรักษาความปลอดภัยของบัญชี รวมถึงให้คุณเข้าสู่ระบบ</td></tr>
+  <tr><td><strong>ข้อมูลสัปปุรุษ:</strong> หากคุณเชื่อมต่อด้วยหมายเลขบัตรประชาชน เราจะนำไปจับคู่กับข้อมูลทะเบียนเดิมและแสดงให้คุณดู ข้อมูลอาจรวมถึงมัสยิดและจังหวัด ข้อมูลติดต่อ เพศ หมู่เลือด สถานภาพครอบครัว และข้อมูลคู่สมรส บิดา และมารดา</td><td>เพื่อให้คุณดูข้อมูลทะเบียนสมาชิกของตนเอง</td></tr>
+  <tr><td><strong>ตำแหน่งที่ตั้ง:</strong> ตำแหน่งอุปกรณ์ของคุณ เฉพาะเมื่อคุณใช้ฟีเจอร์ที่จำเป็นต้องใช้ตำแหน่งและอนุญาตให้เข้าถึง</td><td>เพื่อแสดงทิศกิบละฮ์ มัสยิดและสถานที่ฮาลาลใกล้เคียง สภาพอากาศ และเวลาท้องถิ่น</td></tr>
+  <tr><td><strong>โทเคนสำหรับเข้าสู่ระบบ:</strong> จัดเก็บอย่างปลอดภัยบนอุปกรณ์ของคุณ</td><td>เพื่อให้คุณคงสถานะเข้าสู่ระบบ</td></tr>
+</table>
+
+<h2>2. ข้อมูลที่เก็บไว้บนอุปกรณ์ของคุณ</h2>
+<p>ข้อมูลต่อไปนี้เก็บไว้บนอุปกรณ์ของคุณและไม่ส่งไปยังเซิร์ฟเวอร์ของเรา:</p>
+<ul>
+  <li>บุ๊กมาร์ก รายการโปรด บันทึก และตำแหน่งการอ่านอัลกุรอาน</li>
+  <li>รายการในกระเป๋าซะกาต ซึ่งเก็บไว้ในพื้นที่จัดเก็บที่ปลอดภัยของอุปกรณ์</li>
+  <li>การตั้งค่าอะซาน ภาษา และการตั้งค่าอื่น ๆ ของแอป</li>
+  <li>ไฟล์บันทึกเสียง รูปภาพและวิดีโอที่เลือก และวิดีโอที่ส่งออกจาก Quran Feed ข้อมูลเหล่านี้จะแชร์ต่อเมื่อคุณเลือกแชร์เท่านั้น</li>
+</ul>
+<p>โดยปกติ การลบแอปจะลบข้อมูลเหล่านี้ด้วย โปรดทราบว่าเราไม่สามารถกู้คืนข้อมูลให้คุณได้</p>
+
+<h2>3. สิทธิ์การเข้าถึงอุปกรณ์</h2>
+<ul>
+  <li><strong>ตำแหน่งที่ตั้ง:</strong> เพื่อใช้ในฟีเจอร์ที่ระบุข้างต้น</li>
+  <li><strong>ไมโครโฟน:</strong> เพื่อบันทึกเสียงอ่านของคุณใน Quran Feed เท่านั้น</li>
+  <li><strong>รูปภาพและไฟล์:</strong> เพื่อเลือกพื้นหลังของ Quran Feed เท่านั้น</li>
+  <li><strong>การแจ้งเตือน:</strong> สำหรับอะซานและการแจ้งเตือนล่วงหน้าที่คุณเปิดใช้งาน โดยกำหนดเวลาบนอุปกรณ์ของคุณ</li>
+</ul>
+<p>คุณสามารถเปลี่ยนสิทธิ์เหล่านี้ได้ทุกเมื่อในการตั้งค่าของอุปกรณ์ ซึ่งอาจทำให้ฟีเจอร์ที่เกี่ยวข้องไม่สามารถทำงานได้</p>
+
+<h2>4. ผู้ที่ได้รับข้อมูล</h2>
+<p>เราไม่ขายข้อมูลส่วนบุคคลของคุณ ไม่แสดงโฆษณา และไม่ใช้บริการวิเคราะห์ข้อมูลของบุคคลที่สามในแอป เพื่อให้ฟีเจอร์ต่าง ๆ ทำงาน แอปหรือเซิร์ฟเวอร์ของเราจะเชื่อมต่อกับบริการด้านล่าง เช่นเดียวกับบริการอินเทอร์เน็ตทั่วไป บริการที่แอปติดต่อสามารถเห็นหมายเลข IP ของคุณได้</p>
+<table>
+  <tr><th>บริการ</th><th>วัตถุประสงค์</th><th>ข้อมูลที่เกี่ยวข้อง</th></tr>
+  <tr><td>เซิร์ฟเวอร์ของเรา (imacscenter.org)</td><td>บัญชี ข้อมูลสัปปุรุษ เวลาละหมาด ข้อมูลมัสยิดและฮาลาล</td><td>ข้อมูลบัญชีและตำแหน่งสำหรับการค้นหาสถานที่ใกล้เคียง</td></tr>
+  <tr><td>Overpass API (ข้อมูล OpenStreetMap)</td><td>ข้อมูลมัสยิดและสถานที่ฮาลาลใกล้เคียง โดยเซิร์ฟเวอร์ของเราเป็นผู้ร้องขอ</td><td>พิกัดที่ใช้ค้นหา</td></tr>
+  <tr><td>แผ่นภาพแผนที่ OpenStreetMap, unpkg</td><td>แสดงแผนที่</td><td>บริเวณแผนที่ที่ดู หมายเลข IP</td></tr>
+  <tr><td>Open-Meteo</td><td>สภาพอากาศและคุณภาพอากาศ</td><td>ตำแหน่งหรือสถานที่ที่ค้นหา หมายเลข IP</td></tr>
+  <tr><td>บริการบนอุปกรณ์ของ Apple หรือ Google</td><td>ระบุจังหวัดจากตำแหน่งของคุณ</td><td>ตำแหน่งที่ตั้ง</td></tr>
+  <tr><td>Google Maps</td><td>การนำทาง เฉพาะเมื่อคุณเปิดใช้งาน</td><td>จุดหมายปลายทางและข้อมูลที่คุณกรอกในบริการนั้น</td></tr>
+  <tr><td>mp3quran, Hugging Face, GitHub, Hisn Muslim</td><td>เสียงอัลกุรอานและเนื้อหาอัซการ</td><td>หมายเลข IP</td></tr>
+  <tr><td>Gold API, Frankfurter</td><td>ราคาทองคำ เงิน และอัตราแลกเปลี่ยนสำหรับคำนวณซะกาต</td><td>หมายเลข IP</td></tr>
+</table>
+<p>บริการเหล่านี้จัดการข้อมูลภายใต้นโยบายความเป็นส่วนตัวของตนเอง และอาจตั้งอยู่นอกประเทศไทย</p>
+<p>เราอาจเปิดเผยข้อมูลส่วนบุคคลเมื่อได้รับความยินยอมจากคุณ ให้แก่หน่วยงานของรัฐที่มีอำนาจตามกฎหมาย และให้แก่นักพัฒนา ผู้ดูแลระบบ และผู้รับจ้างที่ดำเนินระบบให้เรา โดยผู้รับจ้างต้องปฏิบัติตามมาตรฐานการรักษาความลับของเรา</p>
+
+<h2>5. ฐานทางกฎหมาย</h2>
+<p>เราประมวลผลข้อมูลส่วนบุคคลเพื่อให้บริการที่คุณร้องขอ โดยอาศัยความยินยอมของคุณในกรณีที่จำเป็น เช่น ข้อมูลตำแหน่งและข้อมูลส่วนบุคคลที่มีความอ่อนไหว เพื่อปฏิบัติตามหน้าที่ทางกฎหมาย และเพื่อประโยชน์โดยชอบด้วยกฎหมายของเราในการรักษาความปลอดภัยของแอป</p>
+
+<h2>6. ระยะเวลาเก็บรักษาข้อมูล</h2>
+<p>เราเก็บข้อมูลบัญชีตลอดเวลาที่บัญชีของคุณยังใช้งานอยู่ และหลังจากนั้นเฉพาะเท่าที่จำเป็นเพื่อปฏิบัติตามหน้าที่ทางกฎหมาย ข้อมูลสัปปุรุษจะเก็บไว้ตราบเท่าที่จำเป็นสำหรับวัตถุประสงค์ด้านมัสยิดและทะเบียนสมาชิกที่เก็บรวบรวมข้อมูลนั้น หรือตามที่กฎหมายกำหนด</p>
+
+<h2>7. สิทธิของคุณ</h2>
+<p>ภายใต้ PDPA คุณสามารถขอเข้าถึง แก้ไข ลบ หรือรับสำเนาข้อมูลของคุณ คัดค้านหรือจำกัดการใช้ข้อมูล และถอนความยินยอมได้ นอกจากนี้ คุณสามารถร้องเรียนต่อคณะกรรมการคุ้มครองข้อมูลส่วนบุคคลของประเทศไทยได้</p>
+<p><strong>การลบบัญชี:</strong> ส่งอีเมลจากอีเมลที่ใช้กับบัญชีของคุณมาที่อีเมลติดต่อด้านล่าง เพื่อขอให้เราลบบัญชี</p>
+
+<h2>8. ความปลอดภัย</h2>
+<p>เราใช้การเชื่อมต่อที่เข้ารหัส จัดเก็บรหัสผ่านเฉพาะในรูปแบบค่าแฮช และเก็บโทเคนสำหรับเข้าสู่ระบบในพื้นที่จัดเก็บที่ปลอดภัยของอุปกรณ์ ไม่มีระบบใดปลอดภัยอย่างสมบูรณ์ ดังนั้น โปรดเก็บรหัสผ่านของคุณเป็นความลับ</p>
+
+<h2>9. ผู้เยาว์</h2>
+<p>ผู้เยาว์ต้องได้รับอนุญาตจากบิดามารดาหรือผู้ปกครองก่อนสร้างบัญชีในกรณีที่กฎหมายกำหนด หากคุณเชื่อว่าเด็กได้ให้ข้อมูลแก่เราโดยไม่ได้รับอนุญาต โปรดติดต่อเราเพื่อให้เราลบข้อมูลนั้น</p>
+
+<h2>10. การเปลี่ยนแปลงนโยบายนี้</h2>
+<p>เราอาจปรับปรุงนโยบายนี้และจะเปลี่ยนวันที่ด้านบนเมื่อมีการปรับปรุง หากมีการเปลี่ยนแปลงที่สำคัญ เราจะแจ้งให้คุณทราบในแอป</p>
+
+<h2>11. ติดต่อเรา</h2>
+<p>บริษัท อิสลามิค ซิสเต็มส์คอร์ปอเรชั่น จำกัด (Islamic System Corporation Co., Ltd.)<br>
+อีเมล: <a href="mailto:i_corp1432@hotmail.com">i_corp1432@hotmail.com</a><br>
+โทรศัพท์: 074360199 (วันจันทร์ถึงวันศุกร์ เวลา 08:30–16:30 น. ยกเว้นวันหยุดนักขัตฤกษ์)<br>
+เว็บไซต์: <a href="https://imacscenter.org">imacscenter.org</a></p>
+</article>
 </main>
+<script>
+(function () {
+  'use strict';
+  var storageKey = 'imacs-policy-language';
+  var buttons = document.querySelectorAll('[data-language]');
+  var titles = { en: 'IMACS App Privacy Policy', th: 'นโยบายความเป็นส่วนตัวของแอป IMACS' };
+  function selectLanguage(language) {
+    if (language !== 'th' && language !== 'en') language = 'en';
+    document.documentElement.lang = language;
+    document.title = titles[language];
+    document.querySelectorAll('article[lang]').forEach(function (article) {
+      article.hidden = article.lang !== language;
+    });
+    buttons.forEach(function (button) {
+      button.setAttribute('aria-pressed', String(button.dataset.language === language));
+    });
+    try { localStorage.setItem(storageKey, language); } catch (_) { /* Storage may be disabled. */ }
+  }
+  var language;
+  try { language = localStorage.getItem(storageKey); } catch (_) { /* Use browser language. */ }
+  if (language !== 'th' && language !== 'en') {
+    language = /^th(?:-|$)/i.test(navigator.language || '') ? 'th' : 'en';
+  }
+  selectLanguage(language);
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () { selectLanguage(button.dataset.language); });
+  });
+  document.querySelector('.language-switcher').hidden = false;
+}());
+</script>
 </body>
 </html>
